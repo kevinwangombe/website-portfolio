@@ -2,6 +2,8 @@
 
 Welcome to the personal portfolio website of Kevin Wangombe, a Fullstack Web Developer. This website showcases my skills, experience, and featured projects. It is designed to be fully responsive, user-friendly, and modern.
 
+**[🌐 View the Live Website Here](https://kevinwangombe.github.io/website-portfolio/)**
+
 ## Features
 
 -   **Hero Section:** A brief introduction with a quick overview of what I do.

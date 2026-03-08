@@ -1,0 +1,318 @@
+index.html portfolio-site
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kevin Wangombe | Fullstack Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of Kevin Wangombe, a Fullstack Web Developer specializing in beautiful, scalable web applications."
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <!-- Background Elements -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <!-- Navigation -->
+    <header id="navbar">
+      <div class="nav-container">
+        <a href="#home" class="logo">KW<span class="dot">.</span></a>
+        <nav class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="menu-btn" aria-label="Toggle menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </header>
+    <main>
+      <!-- Home / Hero Section -->
+      <section id="home" class="hero section-padding">
+        <div class="container hero-container">
+          <div class="hero-content">
+            <p class="greeting">Hi, I am</p>
+            <h1 class="name">Kevin Wangombe</h1>
+            <h2 class="title">
+              I build <span class="gradient-text">digital experiences</span>
+            </h2>
+            <p class="summary">
+              A passionate Fullstack Web Developer focused on crafting clean,
+              user-friendly, and high-performance applications from front to
+              back.
+            </p>
+            <div class="cta-group">
+              <a href="#projects" class="btn btn-primary">View My Work</a>
+              <a
+                href="https://github.com/kevinwangombe"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-icon"
+                aria-label="GitHub"
+              >
+                <i data-lucide="github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- About Section -->
+      <section id="about" class="about section-padding">
+        <div class="container">
+          <h2 class="section-title">About Me</h2>
+          <div class="about-content glass-panel">
+            <div class="about-text">
+              <p>
+                Hello! I'm Kevin, a Fullstack Web Developer who enjoys building
+                things that live on the internet. My interest in web development
+                started with a curiosity about how things work behind the scenes
+                and evolved into a passion for creating impactful software.
+              </p>
+              <p>
+                I specialize in building robust digital products, bringing ideas
+                to life with modern technologies. Whether it's designing a
+                seamless user interface or architecting a scalable backend, I
+                aim to provide the best possible experience for end-users.
+              </p>
+              <p>
+                When I'm not coding, I'm constantly learning new tools and
+                exploring the ever-evolving landscape of software development to
+                refine my craft.
+              </p>
+            </div>
+            <div class="about-stats">
+              <div class="stat-box">
+                <span class="stat-number">2+</span>
+                <span class="stat-label">Years Exp.</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-number">10+</span>
+                <span class="stat-label">Projects done</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Skills Section -->
+      <section id="skills" class="skills section-padding">
+        <div class="container">
+          <h2 class="section-title">My Skills</h2>
+          <div class="skills-grid">
+            <div class="skill-category glass-panel">
+              <h3>Frontend</h3>
+              <div class="skill-list">
+                <div class="skill-item">
+                  <div class="skill-header">
+                    <span>HTML & CSS</span>
+                    <span>95%</span>
+                  </div>
+                  <div class="progress-bar-container">
+                    <div class="progress-bar" data-width="95%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-header">
+                    <span>JavaScript (ES6+)</span>
+                    <span>90%</span>
+                  </div>
+                  <div class="progress-bar-container">
+                    <div class="progress-bar" data-width="90%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-header">
+                    <span>React / Next.js</span>
+                    <span>85%</span>
+                  </div>
+                  <div class="progress-bar-container">
+                    <div class="progress-bar" data-width="85%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="skill-category glass-panel">
+              <h3>Backend</h3>
+              <div class="skill-list">
+                <div class="skill-item">
+                  <div class="skill-header">
+                    <span>Node.js & Express</span>
+                    <span>85%</span>
+                  </div>
+                  <div class="progress-bar-container">
+                    <div class="progress-bar" data-width="85%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-header">
+                    <span>Python / Django</span>
+                    <span>80%</span>
+                  </div>
+                  <div class="progress-bar-container">
+                    <div class="progress-bar" data-width="80%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-header">
+                    <span>SQL & NoSQL</span>
+                    <span>85%</span>
+                  </div>
+                  <div class="progress-bar-container">
+                    <div class="progress-bar" data-width="85%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Projects Section -->
+      <section id="projects" class="projects section-padding">
+        <div class="container">
+          <h2 class="section-title">Featured Projects</h2>
+          <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card glass-panel">
+              <div class="project-content">
+                <h3 class="project-title">E-Commerce Platform</h3>
+                <p class="project-desc">
+                  A full-featured online store with payment gateway integration,
+                  admin dashboard, and user authentication.
+                </p>
+                <div class="project-tech">
+                  <span>React</span>
+                  <span>Node.js</span>
+                  <span>MongoDB</span>
+                </div>
+                <div class="project-links">
+                  <a href="#" aria-label="Github"
+                    ><i data-lucide="github"></i
+                  ></a>
+                  <a href="#" aria-label="External link"
+                    ><i data-lucide="external-link"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="project-card glass-panel">
+              <div class="project-content">
+                <h3 class="project-title">Social Media Dashboard</h3>
+                <p class="project-desc">
+                  Real-time analytics dashboard aggregating data from multiple
+                  social media APIs.
+                </p>
+                <div class="project-tech">
+                  <span>Vue.js</span>
+                  <span>Express</span>
+                  <span>PostgreSQL</span>
+                </div>
+                <div class="project-links">
+                  <a href="#" aria-label="Github"
+                    ><i data-lucide="github"></i
+                  ></a>
+                  <a href="#" aria-label="External link"
+                    ><i data-lucide="external-link"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="project-card glass-panel">
+              <div class="project-content">
+                <h3 class="project-title">Task Management App</h3>
+                <p class="project-desc">
+                  A collaborative productivity app with real-time updates,
+                  drag-and-drop boards, and team roles.
+                </p>
+                <div class="project-tech">
+                  <span>Next.js</span>
+                  <span>TailwindCSS</span>
+                  <span>Firebase</span>
+                </div>
+                <div class="project-links">
+                  <a href="#" aria-label="Github"
+                    ><i data-lucide="github"></i
+                  ></a>
+                  <a href="#" aria-label="External link"
+                    ><i data-lucide="external-link"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact Section -->
+      <section id="contact" class="contact section-padding">
+        <div class="container">
+          <h2 class="section-title">Get In Touch</h2>
+          <div class="contact-wrapper glass-panel">
+            <p class="contact-text">
+              I'm currently looking for new opportunities. Whether you have a
+              question, a project idea, or just want to say hi, I'll try my best
+              to get back to you!
+            </p>
+            <a
+              href="mailto:kevinwangombe192@gmail.com?subject=Connecting%20from%20your%20Portfolio&body=Hi%20Kevin,%0A%0AI%20would%20like%20to%20connect%20with%20you."
+              class="btn btn-primary btn-large"
+              >Say Hello</a
+            >
+
+            <div class="social-links mt-10">
+              <a
+                href="https://github.com/kevinwangombe"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub Profile"
+              >
+                <i data-lucide="github"></i>
+              </a>
+              <a href="mailto:kevinwangombe192@gmail.com?subject=Connecting%20from%20your%20Portfolio&body=Hi%20Kevin,%0A%0AI%20would%20like%20to%20connect%20with%20you." aria-label="Email Me">
+                <i data-lucide="mail"></i>
+              </a>
+              <a 
+                href="https://x.com/kevin_kagunda"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X Profile"
+              >
+                <i data-lucide="twitter"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <p>
+          Designed & Built by
+          <span class="gradient-text">Kevin Wangombe</span> ©
+          <span id="year"></span>
+        </p>
+      </div>
+    </footer>
+    <!-- Custom Script -->
+    <script src="main.js"></script>
+  </body>
+</html>

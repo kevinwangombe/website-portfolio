@@ -84,3 +84,68 @@ revealElements.forEach(el => {
     el.classList.add('reveal');
     revealObserver.observe(el);
 });
+
+// Fetch GitHub Projects
+async function fetchGitHubProjects() {
+    const projectsGrid = document.querySelector('.projects-grid');
+    if (!projectsGrid) return;
+
+    try {
+        const response = await fetch('https://api.github.com/users/kevinwangombe/repos?sort=updated&per_page=15');
+        if (!response.ok) throw new Error('Failed to fetch projects');
+        
+        const repos = await response.json();
+        
+        // Filter out non-project repos (e.g., config repo or the portfolio itself)
+        const excludedRepos = ['kevinwangombe', 'website-portfolio'];
+        const projects = repos.filter(repo => !excludedRepos.includes(repo.name) && !repo.fork).slice(0, 6);
+        
+        if (projects.length > 0) {
+            // Clear existing static projects fallback
+            projectsGrid.innerHTML = '';
+            
+            projects.forEach(project => {
+                // Determine tech stack (GitHub primary language)
+                const techArray = [project.language || 'Code'];
+                const techSpans = techArray.map(tech => `<span>${tech}</span>`).join('');
+                
+                // Better formatting for project names
+                const formattedName = project.name
+                    .replace(/-/g, ' ')
+                    .replace(/\b\w/g, l => l.toUpperCase());
+                
+                const cardHTML = `
+                <div class="project-card glass-panel">
+                  <div class="project-content" style="display: flex; flex-direction: column; height: 100%;">
+                    <h3 class="project-title">${formattedName}</h3>
+                    <p class="project-desc" style="flex-grow: 1;">
+                      ${project.description || 'A web development project built by Kevin.'}
+                    </p>
+                    <div class="project-tech">
+                      ${techSpans}
+                    </div>
+                    <div class="project-links">
+                      <a href="${project.html_url}" target="_blank" rel="noopener noreferrer" aria-label="Github">
+                        <i data-lucide="github"></i>
+                      </a>
+                      ${project.homepage ? `
+                      <a href="${project.homepage}" target="_blank" rel="noopener noreferrer" aria-label="External link">
+                        <i data-lucide="external-link"></i>
+                      </a>` : ''}
+                    </div>
+                  </div>
+                </div>
+                `;
+                projectsGrid.insertAdjacentHTML('beforeend', cardHTML);
+            });
+            
+            // Re-initialize Lucide icons for the new dynamically added icons
+            lucide.createIcons();
+        }
+    } catch (error) {
+        console.error('Error fetching GitHub projects:', error);
+        // On error, the static HTML projects remain as a fallback
+    }
+}
+
+document.addEventListener('DOMContentLoaded', fetchGitHubProjects);
